@@ -1,0 +1,94 @@
+body {
+    width: 100%;
+    height: 658px;
+}
+
+#tudo {
+    width: 100%;
+    height: 658px;
+}
+
+#sidebar {
+    background-color: #222e3ae5;
+    width: 100%;
+    height: 40px;
+}
+
+.nav-link {
+    font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: white;
+}
+
+.navbar-brand {
+    padding-left: 15px;
+}
+
+.table.table {
+    margin-top: 0px;
+    font-size: 15px;
+    font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+thead {
+    background-color: rgba(155, 153, 153, 0.616); 
+}
+
+tbody {
+    background-color: rgba(155, 153, 153, 0.219);
+}
+
+#tabletop {
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 24px;
+}
+
+p {
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.89);
+}
+
+#banner {
+    background-image: linear-gradient(120deg, #91C4FF 0%, #F0F7FF 87%);
+    position: relative;
+    width: 100%;
+    height: 950px;
+  }
+  
+  #cloud-scroll {
+    background: url(http://9a2e1a2047765d2a004e-e6d2db425d8d4f2619e5cee56a48bcef.r55.cf2.rackcdn.com/clouds.png) repeat-x;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    -webkit-animation: 900000s backgroundScroll infinite linear;
+    -moz-animation: 900000s backgroundScroll infinite linear;
+    -o-animation: 900000s backgroundScroll infinite linear;
+    -ms-animation: 900000s backgroundScroll infinite linear;
+    animation: 900000s backgroundScroll infinite linear;
+  }
+  
+  @-webkit-keyframes backgroundScroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -99999999px 0;
+    }
+  }
+  
+  @keyframes backgroundScroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -99999999px 0;
+    }
+  }
