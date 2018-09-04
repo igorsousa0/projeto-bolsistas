@@ -1,0 +1,68 @@
+<body id="tudo">
+  <div id="topo">
+    <nav class="navbar navbar-light" style="background: linear-gradient(to bottom, #0099ff 0%, #0066ff 100%);">
+      <h3 style="height:50px;color:white;">Preencha todos os Campos</h3>
+    </nav>
+  </div>
+  <div id="principal">
+      <form method="post" action="OO/inserirOO.php" onsubmit="return validaForm()" name="teste">
+        <table align="center" cellspacing="9">
+          <tbody><tr>
+            <td align="right">Nome Completo:</td> 
+            <td><input type="text" name="nome" maxlength="50" size="30"></td>
+          </tr>
+    
+          <tr>
+            <td align="right">Matricula:</td> 
+            <td><input type="text" name="matricula" maxlength="7" size="10"></td>
+          </tr>
+          
+          <tr>
+            <td align="right">E-mail:</td> 
+            <td><input type="text" name="email" maxlength="50" size="30"></td>
+          </tr>
+                
+          <tr>
+            <td align="right">Telefone:</td>
+            <td><input type="text" name="tel" id="tel" size="10">&nbsp; Celular: <input type="text" name="cel" id="cel" size="10"><br></td>
+          </tr>
+  
+          <tr>
+          <td align="right">Tipo:</td>							
+          <td><select name="tipo">
+            <option value="Bolsista">Bolsista</option>
+            <option value="Voluntario">Voluntario</option>
+            <option value="Ex-Bolsista">Ex-Bolsista</option>
+            <option value="Ex-Voluntario">Ex-Voluntario</option>
+              </select></td>
+          </tr>					
+                
+          <tr>
+            <td align="right">Turno do Bolsista:</td>
+                
+          <td><select name="turno">
+            <option value="M">Manhã das 7:15 às 11:15</option>
+            <option value="T">Tarde das 11:15 às 15:15</option>
+            <option value="C">Tarde/Noite das 15:15 às 19:15</option>
+            <option value="N">Noite das 19:15 às 23:00</option>
+            <option value="S">Sábado</option>
+            </select></td>
+          </tr>
+                
+          <tr>
+            <td align="right">Data de entrada:</td> 
+            <td><input type="text" size="10" maxlength="10" value="dd/mm/aaaa" readonly="" name="theDate1" onclick="displayCalendar(document.forms[0].theDate1,'dd/mm/yyyy',this)" onfocus="if(this.value=='dd/mm/aaaa') this.value='';">
+          
+            Data do término: 
+            <input type="text" size="10" maxlength="10" value="dd/mm/aaaa" readonly="" name="theDate2" onclick="displayCalendar(document.forms[0].theDate2,'dd/mm/yyyy',this)" onfocus="if(this.value=='dd/mm/aaaa') this.value='';"></td></tr>
+          
+                
+          <tr>
+            <td colspan="2" align="center"><input type="submit" value="Cadastrar"></td>
+          </tr>
+        </tbody></table>
+      </form>
+  </div> 
+
+
+</body>

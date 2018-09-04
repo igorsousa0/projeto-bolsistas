@@ -1,4 +1,7 @@
+import { BolsistaspageService } from '../bolsistaspage.service';
 import { Component, OnInit } from '@angular/core';
+import { Campo } from './bolsista';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-bolsistaspage',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BolsistaspageComponent implements OnInit {
 
-  constructor() { }
+  campos: Campo[];
+
+  constructor(private service: BolsistaspageService) { }
 
   ngOnInit() {
+    this.service.list().subscribe(dados => this.service = dados);
+    (err: HttpErrorResponse) => {
+      console.log (err.message);
+    }
   }
 
 }

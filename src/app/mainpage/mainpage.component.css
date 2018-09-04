@@ -11,13 +11,12 @@ body {
 }
 
 #tudo { 
-	width:1005px;
+	width:1007px;
 	position:relative;  /*Contexto de posicionamento */
 	margin:0 auto;
 	text-align:left;
 	min-height:100%;
-	border-left:1px solid #000;
-	border-right:1px solid #000;
+	border:1px solid #000;
 }
 * html #tudo {height: 100%;}
 #conteudo {padding-bottom:30px;}
@@ -88,4 +87,9 @@ nav.navbar.navbar-light {
 
 app-root {
     height: 100%;
+}
+
+div.card-body.gradient-buttons {
+	padding-left: 8%;
+	padding-right: 8%;
 }
