@@ -1,24 +1,27 @@
-import { BolsistaspageService } from '../bolsistaspage.service';
 import { Component, OnInit } from '@angular/core';
 import { Campo } from './bolsista';
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-bolsistaspage',
   templateUrl: './bolsistaspage.component.html',
   styleUrls: ['./bolsistaspage.component.css']
 })
-export class BolsistaspageComponent implements OnInit {
+export class BolsistaspageComponent  {
 
-  campos: Campo[];
+  private readonly API = 'http://localhost:3000/campos';
 
-  constructor(private service: BolsistaspageService) { }
+  campos: any;
+
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.service.list().subscribe(dados => this.service = dados);
-    (err: HttpErrorResponse) => {
-      console.log (err.message);
+    this.campos = this.http.get(this.API).subscribe(data => {
+      this.campos = data as string [];
+    },
+    data => {
+      this.campos = data as string [];	 
+    }
     }
   }
 
-}
